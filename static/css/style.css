@@ -15,42 +15,7 @@ body {
   margin: 0px;
 }
 
-.navbar {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 5px 50px;
-  background-color: MediumTurquoise;
-}
-
-.navbar span {
-  display: flex;
-  align-items: center;
-  margin: 0 10px;
-}
-
-.navbar a {
-  text-decoration: none;
-  color: black;
-  padding: 3px 6px;
-  font-size: 1.5rem;
-}
-
-.navbar a:hover {
-  background-color: PaleTurquoise;
-  padding: 3px 6px;
-  border-radius: 10px;
-}
-
-.logo {
-  display:flex;
-  width: 60px;
-  margin: 5px;
-  /* border: 5px solid PaleTurquoise;
-  border-radius: 20px; */
-}
-
 .container {
   padding: 10px 20px;
   margin: 0 15vw;
 }
-
