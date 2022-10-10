@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block head %}
+  <style>
+    table {
+      width: 100%;
+    }
+    td {
+      padding: 10px;
+      border-bottom: 2px solid;
+    }
+    .title {
+      font-size: 1.5rem;
+    }
+    .content {
+      display: flex;
+      justify-content: left;
+      min-height: 20vh;
+      margin: 10px 0;
+    }
+    .right {
+      text-align: right;
+      padding-top: 20px;
+    }
+    .button {
+      background-color: Khaki;
+      color: SaddleBrown;
+      border: 1px solid;
+      border-radius: 10px;
+      padding:8px 10px;
+      text-decoration: none;
+    }
+  </style>
+{% endblock %}
+
+{% block body %}
+  <h1>작성 글 보기</h1>
+
+  <table>
+    <tr>
+      <td class="title">{{post.title}}</td>
+    </tr>
+    <tr>
+      <td>작성일 : {{post.date|date:'Y-m-d A f'}}</td>
+    </tr>
+    <tr>
+      <td class="content">{{post.content}}</td>
+    </tr>
+  </table>
+
+  
+  <div class="right">
+    <a class="button" href="{% url 'page:read' %}">글 목록</a>
+  </div>
+{% endblock %}

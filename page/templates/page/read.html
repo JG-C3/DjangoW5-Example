@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+
+{% block head %}
+  <style>
+    .right {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: right;
+      text-align: right;
+      padding-bottom: 20px;
+    }
+    .button {
+      background-color: Khaki;
+      color: SaddleBrown;
+      border: 1px solid;
+      border-radius: 10px;
+      padding:5px 10px;
+      text-decoration: none;
+    }
+    table {
+      margin: auto;
+      width: 100%;
+    }
+    .index {
+      width: auto;
+      text-align: center;
+    }
+    .title {
+      width: 45vw;
+      padding: 5px 20px;
+    }
+    .date {
+      width: auto;
+      text-align: center;
+    }
+    th {
+      border-bottom: 2px solid;
+      padding: 5px;
+    }
+    td {
+      border-bottom: 1px solid;
+      padding: 5px 10px;
+    }
+    td a {
+      text-decoration: none;
+      color: black;
+    }
+    td a:hover {
+      text-decoration: underline;
+      color: purple;
+    }
+  </style>
+{% endblock %}
+
+{% block body %}
+  <h1>작성 글 목록</h1>
+
+  <div class="right">
+    <a class="button" href="{% url 'page:create' %}">글쓰기</a>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th class="index">번호</th>
+        <th class="title">제목</th>
+        <th class="date">날짜</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+    {% for post in posts reversed %}
+      <tr>
+        <td class="index">{{forloop.revcounter}}</td>
+        <td class="title"><a href="{% url 'page:detail' post.id %}">{{post.title}}</a></td>
+        <td class="date">{{post.date|date:'Y-m-d'}}</td>
+      </tr>
+    {% empty %}
+      <tr>
+        <td class="index">-</td>
+        <td class="title">글을 작성해주세요.</td>
+        <td class="date">-</td>
+      </tr>
+    {% endfor %}
+  </table>
+{% endblock %}
