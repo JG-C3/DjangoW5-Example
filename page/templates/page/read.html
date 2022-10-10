@@ -60,21 +60,21 @@
   </div>
 
   <table>
-    <thead>
-      <tr>
-        <th class="index">번호</th>
-        <th class="title">제목</th>
-        <th class="date">날짜</th>
-      </tr>
-    </thead>
-    <tbody>
-    </tbody>
+    <tr>
+      <th class="index">번호</th>
+      <th class="title">제목</th>
+      <th class="date">날짜</th>
+    </tr>
+    <!-- [코드 추가] reversed를 이용해 for문을 거꾸로 반복하기 -->
     {% for post in posts reversed %}
       <tr>
+        <!-- [코드 수정] 반복문의 index를 거꾸로 가져오는 revcounter 사용 -->
         <td class="index">{{forloop.revcounter}}</td>
         <td class="title"><a href="{% url 'page:detail' post.id %}">{{post.title}}</a></td>
+        <!-- [코드 추가] 날짜를 보여주는 형식을 지정하기 -->
         <td class="date">{{post.date|date:'Y-m-d'}}</td>
       </tr>
+    <!-- for문의 리스트가 비어있을 경우에 보여주는 내용 -->
     {% empty %}
       <tr>
         <td class="index">-</td>

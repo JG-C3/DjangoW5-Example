@@ -44,7 +44,9 @@
 {% block body %}
   <h1>글쓰기</h1>
 
+  <!-- [코드 추가] form의 전달방식을 post로 설정하기 -->
   <form action="" method="post">
+    <!-- [코드 작성] csrf_token 설정하기 -->
     {% csrf_token %}
     <table>
       <tr>
@@ -52,7 +54,9 @@
         <td><input class="title" name="title" id="title" type="text"></td>
       </tr>
     </table>
+    
     <br>
+
     <table>
       <tr>
         <td colspan="2">
@@ -65,6 +69,7 @@
         </td>
       </tr>
     </table>
+
     <div class="right">
       <input class="button" type="submit" value="등록">
     </div>
