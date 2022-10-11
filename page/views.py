@@ -10,6 +10,7 @@ def read(request):
     # [코드 작성] Post 모델의 모든 객체를 리스트로 가져오기
     posts = Post.objects.all()
     context = {
+        # [코드 작성] context에 posts 리스트를 딕셔너리 형식으로 넘겨주기
         'posts': posts,
     }
     return render(request, 'page/read.html', context)

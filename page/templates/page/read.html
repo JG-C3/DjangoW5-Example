@@ -74,7 +74,7 @@
         <!-- [코드 수정] 반복문의 index를 거꾸로 가져오는 revcounter 사용 -->
         <td class="index">{{forloop.revcounter}}</td>
         <td class="title"><a href="{% url 'page:detail' post.id %}">{{post.title}}</a></td>
-        <!-- [코드 추가] 날짜를 보여주는 형식을 지정하기 -->
+        <!-- [코드 추가] 날짜를 보여주는 형식을 'Y-m-d'로 지정하기 -->
         <td class="date">{{post.date|date:'Y-m-d'}}</td>
       </tr>
     <!-- for문의 리스트가 비어있을 경우에 보여주는 내용 -->
