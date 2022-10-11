@@ -29,11 +29,11 @@ def result(request, pick):
     # [미션] 내가 선택한 'pick'과 'com' 변수에 저장된 가위바위보 결과를 비교해서 'result' 변수에 결과(승리, 무승부, 패배)를 저장하는 로직 작성하기
     # [미션] win(승리), draw(무승부), lose(패배) 횟수를 가위바위보 결과에 따라 증가시키기
     if pick == com:
-        result = "승리"
-        win += 1
-    elif (pick == "가위" and com == "보") or (pick == "바위" and com == "가위") or (pick == "보" and com == "바위"):
         result = "무승부"
         draw += 1
+    elif (pick == "가위" and com == "보") or (pick == "바위" and com == "가위") or (pick == "보" and com == "바위"):
+        result = "승리"
+        win += 1
     else :
         result = "패배"
         lose += 1

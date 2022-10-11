@@ -10,7 +10,7 @@ html {
 }
 
 body {
-  margin: 0px;
+  margin: 0 0 5vh 0;
   background-color: whitesmoke;
   font-family: 'GangwonEdu_OTFBoldA';
 }
