@@ -10,12 +10,12 @@ html {
 }
 
 body {
+  margin: 0px;
   background-color: whitesmoke;
   font-family: 'GangwonEdu_OTFBoldA';
-  margin: 0px;
 }
 
 .container {
+  margin: 0 20vw;
   padding: 10px 20px;
-  margin: 0 15vw;
 }

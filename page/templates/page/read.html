@@ -4,28 +4,31 @@
   <style>
     .right {
       display: flex;
+      flex-direction: row;
       flex-wrap: wrap;
+      /* align-items : flex-direction 방향을 기준으로 정렬 */
       justify-content: right;
       text-align: right;
       padding-bottom: 20px;
     }
     .button {
-      background-color: Khaki;
-      color: SaddleBrown;
+      padding: 5px 10px;
       border: 1px solid;
       border-radius: 10px;
-      padding: 5px 10px;
+      background-color: Khaki;
+      color: SaddleBrown;
       text-decoration: none;
     }
     table {
-      margin: auto;
       width: 100%;
+      margin: auto;
     }
     .index {
       width: auto;
       text-align: center;
     }
     .title {
+      /* 45vw : 현재 스크린의 넓이를 기준으로 45%의 넓이를 차지 */
       width: 45vw;
       padding: 5px 20px;
     }
@@ -34,20 +37,20 @@
       text-align: center;
     }
     th {
-      border-bottom: 2px solid;
       padding: 5px;
+      border-bottom: 2px solid;
     }
     td {
-      border-bottom: 1px solid;
       padding: 5px 10px;
+      border-bottom: 1px solid;
     }
     td a {
-      text-decoration: none;
       color: black;
+      text-decoration: none;
     }
     td a:hover {
-      text-decoration: underline;
       color: purple;
+      text-decoration: underline;
     }
   </style>
 {% endblock %}
